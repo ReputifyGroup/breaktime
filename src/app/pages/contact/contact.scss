@@ -102,6 +102,15 @@
             text-decoration: underline;
           }
         }
+
+        .day {
+          display: inline-block;
+          width: 90px;
+        }
+
+        .time {
+          display: inline-block;
+        }
       }
 
       .social-btn {

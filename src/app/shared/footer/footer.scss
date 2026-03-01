@@ -40,10 +40,17 @@
 
       p {
         display: flex;
-        justify-content: space-between;
         width: 100%;
         max-width: 250px;
-        gap: 1rem;
+
+        .day {
+          display: inline-block;
+          width: 90px;
+        }
+
+        .time {
+          flex: 1;
+        }
       }
     }
 
