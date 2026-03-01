@@ -37,6 +37,14 @@
     &:first-child {
       align-items: flex-start;
       text-align: left;
+
+      p {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 250px;
+        gap: 1rem;
+      }
     }
 
     &:last-child {
@@ -84,6 +92,12 @@
       font-size: 1rem;
       color: #e8c5a0;
       font-weight: 500;
+
+      a {
+        color: #e8c5a0;
+        text-decoration: none;
+        font-weight: 500;
+      }
     }
   }
 
