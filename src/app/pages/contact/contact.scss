@@ -115,8 +115,9 @@
 
       .order-links {
         display: flex;
-        flex-direction: column;
-        gap: 1rem;
+        gap: 1.5rem;
+        justify-content: center;
+        flex-wrap: wrap;
 
         a {
           color: #d4a574;
