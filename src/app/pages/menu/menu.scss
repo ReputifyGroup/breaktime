@@ -20,6 +20,7 @@
     position: relative;
     width: 100%;
     aspect-ratio: 420 / 297;
+    margin-bottom: 0.85rem;
   }
 
   .menu-image {
@@ -34,72 +35,64 @@
   }
 
   .slider-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(255, 255, 255, 0.85);
-    border: none;
-    font-size: 2.5rem;
-    padding: 0.5rem 1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    font-size: 1.3rem;
+    line-height: 1;
+    padding: 0;
     cursor: pointer;
-    border-radius: 4px;
+    border-radius: 999px;
     transition: all 0.3s ease;
-    color: #333;
-    z-index: 10;
+    color: #5a4a42;
 
     &:hover {
-      background: rgba(255, 255, 255, 0.95);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    }
-
-    &.prev-btn {
-      left: 1rem;
-    }
-
-    &.next-btn {
-      right: 1rem;
+      background: #f7f4f2;
+      border-color: rgba(0, 0, 0, 0.18);
+      color: #3b2f2a;
     }
 
     @media (max-width: 768px) {
-      font-size: 1.5rem;
-      padding: 0.3rem 0.7rem;
-      
-      &.prev-btn {
-        left: 0.5rem;
-      }
-
-      &.next-btn {
-        right: 0.5rem;
-      }
+      width: 1.8rem;
+      height: 1.8rem;
+      font-size: 1.1rem;
     }
   }
 
-  .slider-indicators {
-    position: absolute;
-    bottom: 1rem;
-    left: 50%;
-    transform: translateX(-50%);
+  .slider-controls {
     display: flex;
-    gap: 0.5rem;
-    z-index: 10;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+  }
+
+  .slider-indicators {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
   }
 
   .indicator {
-    width: 12px;
-    height: 12px;
+    width: 0.5rem;
+    height: 0.5rem;
     border-radius: 50%;
-    border: 2px solid rgba(255, 255, 255, 0.7);
-    background: transparent;
+    border: 1px solid rgba(90, 74, 66, 0.35);
+    background: rgba(90, 74, 66, 0.2);
     cursor: pointer;
     transition: all 0.3s ease;
 
     &:hover {
-      background: rgba(255, 255, 255, 0.5);
+      background: rgba(90, 74, 66, 0.35);
     }
 
     &.active {
-      background: rgba(255, 255, 255, 0.9);
-      border-color: rgba(255, 255, 255, 0.9);
+      background: #5a4a42;
+      border-color: #5a4a42;
+      transform: scale(1.12);
     }
   }
 
@@ -114,14 +107,13 @@
       border-radius: 4px;
     }
 
-    .slider-indicators {
-      bottom: 0.5rem;
-      gap: 0.4rem;
+    .slider-controls {
+      gap: 0.55rem;
     }
 
     .indicator {
-      width: 10px;
-      height: 10px;
+      width: 0.45rem;
+      height: 0.45rem;
     }
   }
 }
