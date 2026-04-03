@@ -10,8 +10,8 @@ import { CommonModule } from '@angular/common';
 export class Menu {
   currentImageIndex = 0;
   menuImages = [
-    '/assets/gallery/galeria-3.jpg',
-    '/assets/gallery/galeria-1.jpg'
+    '/assets/menu-1.jpg',
+    '/assets/menu-2.jpg'
   ];
 
   nextImage() {
