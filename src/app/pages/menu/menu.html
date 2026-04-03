@@ -1,5 +1,24 @@
 <div class="menu-page">
   <div class="menu-image-container">
-    <img src="/assets/menu.jpg" alt="BREAKTIME Menu" class="menu-image">
+    <div class="image-slider">
+      <img [src]="menuImages[currentImageIndex]" alt="BREAKTIME Menu" class="menu-image">
+      
+      <button class="slider-btn prev-btn" (click)="prevImage()" aria-label="Predchádzajúci obrázok">
+        ‹
+      </button>
+      <button class="slider-btn next-btn" (click)="nextImage()" aria-label="Nasledujúci obrázok">
+        ›
+      </button>
+    </div>
+    
+    <div class="slider-indicators">
+      <button 
+        *ngFor="let i of [0, 1]" 
+        class="indicator" 
+        [class.active]="i === currentImageIndex"
+        (click)="goToImage(i)"
+        [attr.aria-label]="'Obrázok ' + (i + 1)">
+      </button>
+    </div>
   </div>
 </div>
